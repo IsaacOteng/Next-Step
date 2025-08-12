@@ -30,31 +30,31 @@ const Homepage = () => {
 
     return (
         <>
-        <div className='homepage w-full'>
-            <div className='header ml-2 mt-2 flex flex-col md:flex-row w-full items-start md:items-center'>
-            <img src="/src/assets/unstop-logo.png" className='unstop-logo w-16 h-13/2 mt-1 ml-1'  alt="unstop-Logo" />
+    <div className='homepage w-full flex flex-col md:flex-row flex-wrap items-center'>
+            <div className='header w-full flex flex-col md:flex-row flex-wrap items-center md:items-center px-2 pt-2'>
+            <img src="/src/assets/unstop-logo.png" className='unstop-logo w-20 h-13/2 mt-1 ml-3 mr-1'  alt="unstop-Logo" />
                     <div className="search relative mt-1">
-                        <Search className='absolute left-4 top-3 -translate-y-1/2 h-5 w-5 text-gray-500'/>
+                        <Search className='absolute left-4 top-4 -translate-y-1/2 h-5 w-5 text-gray-500'/>
                         <input 
                             type="text"  
                             placeholder='Search Opportunities'
-                            className='mx-2 h-6 text-xs px-3 py-2 pl-10 border border-black rounded-2xl  focus:outline-none'/>
+                            className=' w-53 mx-2 h-8 text-xs px-3 py-2 pl-10 border border-black rounded-2xl  focus:outline-none'/>
                     </div>
                                 
             {/* Adding a navigation bar*/}
             
-            <nav className='relative flex h-8 w-full md:w-auto mt-2 md:mt-0 justify-start md:justify-normal'>
+            <nav className='navbar relative flex flex-wrap h-8 w-full md:w-auto ml-7 md:mt-0 justify-start md:justify-normal items-center'>
 
-                <a href="#" className='px-2 p-1 mx-1 border border-transparent hover:border hover:rounded-2xl hover:bg-gray-100 '>Internships</a>
-                <a href="#" className='px-2 p-1 mx-1 border border-transparent hover:border hover:rounded-2xl hover:bg-gray-100'>Jobs</a>
-                <a href="#" className='px-2 p-1 mx-1 border border-transparent hover:border hover:rounded-2xl hover:bg-gray-100'>Competitions</a>
-                <a href="#" className='px-2 p-1 mx-1 border border-transparent hover:border hover:rounded-2xl hover:bg-gray-100'>Mentorships</a>
-                <a href="#" className='px-2 p-1 mx-1 border border-transparent hover:border hover:rounded-2xl hover:bg-gray-100'>Practice</a>
+                <a href="#" className='px-2 p-2 mx-1 border border-transparent hover:border hover:rounded-2xl hover:bg-gray-100 '>Internships</a>
+                <a href="#" className='px-2 p-2 mx-1 border border-transparent hover:border hover:rounded-2xl hover:bg-gray-100'>Jobs</a>
+                <a href="#" className='px-2 p-2 mx-1 border border-transparent hover:border hover:rounded-2xl hover:bg-gray-100'>Competitions</a>
+                <a href="#" className='px-2 p-2 mx-1 border border-transparent hover:border hover:rounded-2xl hover:bg-gray-100'>Mentorships</a>
+                <a href="#" className='px-2 p-2 mx-1 border border-transparent hover:border hover:rounded-2xl hover:bg-gray-100'>Practice</a>
             {/* Dropdown Menu for More */}
                 <div ref={dropdownmenu} className='relative inline-flex'>
                     <button ref={buttonRef} className='px-2 p-1 mx-1 border border-transparent hover:border hover:rounded-2xl hover:bg-gray-100 flex items-center gap-1'>
-                        More <span className="ml-1">▼</span>
-                    </button>
+                        More <span className="-ml-1 rotate-180">^</span>
+                    </button> 
                     <ul ref={menuRef} className='hidden absolute top-8 -left-24 min-w-[170px] bg-white border border-gray-200 rounded-2xl shadow-2xl z-10 py-2'>
                         <li className='flex items-center ml-2 mr-2 px-4 py-2 hover:bg-gray-100 cursor-pointer'><BookOpen className='mr-3 h-4 w-4' /> Courses</li>
                         <li className='flex items-center ml-2 mr-2 px-4 py-2 hover:bg-gray-100 cursor-pointer'><BadgeDollarSign className='mr-3 h-4 w-4' /> Scholarships</li>
@@ -64,8 +64,17 @@ const Homepage = () => {
                         <li className='flex items-center ml-2 mr-2 px-4 py-2 hover:bg-gray-100 cursor-pointer'><FileText className='mr-3 h-4 w-4' /> Blog</li>
                     </ul>
                 </div>
-            </nav>
+            </nav> 
+
+            <div className='flex items-center gap-2 mt-2 md:mt-0 ml-7'>
+                <span className='w-0.5 h-10 bg-black opacity-5'></span>
+                <button className='flex w-20 h-10 justify-center px-4 py-2 bg-white border text-black rounded-3xl hover:bg-gray-100 hover:border-blue-500 hover:text-blue-500'>Host</button>
+                <button className='flex w-30 justify-center px-4 py-2 bg-amber-100 border border-amber-400 text-black rounded-3xl hover:bg-amber-200 hover:border-amber-500'>Host</button>     
+                <span className='w-0.5 h-10 bg-black opacity-5'></span>
+                <button className='flex w-20 justify-center px-4 py-2 bg-blue-500 border text-white rounded-3xl hover:bg-blue-700 transition-colors duration-300'>Host</button>
+            </div>
         </div>
+        <hr className=' mt-3 w-full bg-black opacity-50' />
     </div>
 </>
 );
