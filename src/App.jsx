@@ -1,10 +1,12 @@
 import React from 'react'
-import Homepage from './components/Homepage'
+import Header from './components/Header'
+import Career from './components/Career'
 
 const App = () => {
   return (
     <>
-    <Homepage />
+    <Header />
+    <Career />
     </>
   )
 }
