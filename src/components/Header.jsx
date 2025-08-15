@@ -52,7 +52,7 @@ const Header = () => {
                 <a href="#" className='px-2 p-2 mx-1 border border-transparent hover:border hover:rounded-2xl hover:bg-gray-100'>Practice</a>
             {/* Dropdown Menu for More */}
                 <div ref={dropdownmenu} className='relative inline-flex'>
-                    <button ref={buttonRef} className='px-2 p-1 mx-1 border border-transparent hover:border hover:rounded-2xl hover:bg-gray-100 flex items-center gap-1'>
+                    <button ref={buttonRef} className='px-2 p-1 mx-1 border border-transparent hover:border hover:rounded-2xl hover:bg-gray-100 flex items-center gap-1 hover:transition-all hover:duration-700 hover:ease-in-out'>
                         More <span className="-ml-1 rotate-180">^</span>
                     </button> 
                     <ul ref={menuRef} className='hidden absolute top-8 -left-35 min-w-[200px] bg-white border border-gray-200 rounded-2xl shadow-2xl z-10 py-2'>
